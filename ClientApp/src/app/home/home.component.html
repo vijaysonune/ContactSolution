@@ -1,24 +1,12 @@
-<div  >
-    <div>
-      <table style="border: 1px black ;">
-        <th>
-          <tr>
-          <td>FirstName</td>
-          <td>LastName</td>
-          <td>Email</td>
-          <td>PhoneNumber</td>
-          <td>Status</td>
-         </tr>
-        </th>
-        <tr *ngFor="let contact of Contacts">         
-          <td>{{contact.FirstName}}</td>
-          <td>{{contact.LastName}}</td>
-          <td>{{contact.Email}}</td>
-          <td>{{contact.PhoneNumber}}</td>
-          <td>{{contact.Status}}</td>      
-       
-       </tr>
-      </table>
-    </div>
- 
-  </div>
+<div  class="container mt-5">
+    <div style="text-align: center;">
+       <h1>find your Contact Number</h1>
+       <p class="lead">Come on in to view your contact details... all you need to do is just click on List !</p>
+       <div class="text-center">
+           <button class="btn btn-primary btn-lg mg-2" routerLink="List">List</button>
+           <button class="btn btn-info btn-lg mg-2">Learn More</button>
+       </div>
+   </div>   
+   
+   
+   </div>

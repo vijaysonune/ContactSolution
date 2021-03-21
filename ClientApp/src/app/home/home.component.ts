@@ -8,20 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  baseUrl = 'http://localhost:53429/api/contact/List';
-  Contacts : any = {};
-
-  constructor (private http : HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  getList()
-  {
-    this.http.get(this.baseUrl).subscribe( response  => {
-      console.log(response);
-      this.Contacts= response;
-    })
-  }
+  
 
 }
