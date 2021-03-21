@@ -1,0 +1,42 @@
+<div class="container">
+    <div *ngIf="(!editToggle)&&(!deleteToggle)&&(!addToggle)" >
+      <table class="table">  
+        <thead class="thead-light">      
+          <tr>
+          <th scope="col">FirstName</th>
+          <th scope="col">LastName</th>
+          <th scope="col">Email</th>
+          <th scope="col">PhoneNumber</th>
+          <th scope="col">Status</th>
+          <th scope="col">Edit</th>
+          <th scope="col">delete</th>
+         </tr>       
+         </thead>
+         <tbody> 
+        <tr *ngFor="let contact of Contacts">         
+          <td>{{contact.FirstName}}</td>
+          <td>{{contact.LastName}}</td>
+          <td>{{contact.Email}}</td>
+          <td>{{contact.PhoneNumber}}</td>
+          <td>{{contact.Status}}</td>      
+            
+          <td><button class="btn btn-primary" (click)="edit(contact)" >Edit</button></td>  
+          <td><button class="btn btn-warning" (click)="delContact(contact)" >Delete</button></td>  
+         
+       
+       </tr>
+    </tbody>   
+      </table>
+      <button class="btn btn-primary" (click)="AddContact()" >Add Contact</button>
+      
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+        <app-edit *ngIf="editToggle" [updateContact]="contact"></app-edit>
+        <app-delete *ngIf="deleteToggle" [deleteContact]="contact"></app-delete>
+        <app-add *ngIf="addToggle"></app-add>
+        </div>
+    </div>
+ 
+</div>
+
