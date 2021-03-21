@@ -1,0 +1,24 @@
+<div  >
+    <div>
+      <table style="border: 1px black ;">
+        <th>
+          <tr>
+          <td>FirstName</td>
+          <td>LastName</td>
+          <td>Email</td>
+          <td>PhoneNumber</td>
+          <td>Status</td>
+         </tr>
+        </th>
+        <tr *ngFor="let contact of Contacts">         
+          <td>{{contact.FirstName}}</td>
+          <td>{{contact.LastName}}</td>
+          <td>{{contact.Email}}</td>
+          <td>{{contact.PhoneNumber}}</td>
+          <td>{{contact.Status}}</td>      
+       
+       </tr>
+      </table>
+    </div>
+ 
+  </div>
